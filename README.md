@@ -1,4 +1,5 @@
 # BunnyInc #NowPlaying
+You can visit this project at https://167.99.161.158/ . The site will ask for your location, then pull tweets from your Area with #NowPlaying!
 
 # Overview
 
@@ -24,7 +25,7 @@ You can visit this project at https://167.99.161.158/ . The site will ask for yo
 
 When I initially viewed this challenge the first thing that popped into my head was ReactJS! Its **flexibility would still allow me to use other libraries** (or even frameworks for that matter) but **it's uni-directional approach to logic would allow me to create these very neat, isolated, OOP based components** that would do some logic, render an output, and pass data to its children.** 
 
-As far as the TwitterAPI goes, **at first I tried using the StreamingAPI to get real-time updates but this turned out to be overkill and not really necessary**. In the beginning, I had even built out a Processing Queue and a Consumer to collect and consumer tweets in realtime with separate processes ( this was the server wouldn't be slowed down ). In the end, I simply **repeatedly call the SearchAPI every few minutes and update the UI if there any differnces in our current data vs the new data we just pulled in.**
+As far as the TwitterAPI goes, **at first I tried using the StreamingAPI to get real-time updates but this turned out to be overkill and not really necessary**. In the beginning, I had even built out a Processing Queue and a Consumer to collect and consumer tweets in realtime with separate processes ( this was the server wouldn't be slowed down ). In the end, I simply **repeatedly call the SearchAPI every few minutes and update the UI if there any differences in our current data vs the new data we just pulled in.**
 
 # Conclusion
 
