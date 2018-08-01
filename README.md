@@ -1,5 +1,7 @@
 # BunnyInc #NowPlaying
 
+# Overview
+
 This SPA was created utilizing ReactJS (for its flexibility and reusable component architecture). Custom APIs to communicate with various 3rd party technologies were created in PHP and hosted on Apache2. Below you can find a comprehensive list of the technologies used in this app and why they were chosen.
 
   - **React** was chosen because it allowed for a very flexible 'framework' with reusable components and HTML built into JS as opposed to some JS functionality built into HTML. This allowed for each component to handle its logic in a very isolated & uni-directional way. 
@@ -7,6 +9,16 @@ This SPA was created utilizing ReactJS (for its flexibility and reusable compone
   - **Jquery** allowed me to create AJAX requests effortlessly and reference elements in a comfortable & familiar way.
   - **TwitterOAuth** This is PHP library to connect to the TwitterAPI
   - **react-twitter-widgets** opposed to creating my own custom twitter widgets this beautiful library helped me connect to twitters Oembed API, allowing me to embed official, functional, twitter cards into the application.
+
+
+
+# Deployment
+You can visit this project at https://167.99.161.158/ . The site will ask for your location, then pull tweets from your Area with #NowPlaying!
+ - Install all required libraries and dependencies (Node, NPM, Composer, Curl)
+ - Clone repo to Apache or PHP friendly server
+ - Use NPM to build out the project
+ - Move /build contents to public_html directory along with the /APIs & /Vendor folder
+ - Check all file paths are correct and you're done! :) 
 
 # Approach
 
