@@ -1,5 +1,5 @@
 # BunnyInc #NowPlaying
-You can visit this project at https://167.99.161.158/ . The site will ask for your location, then pull tweets from your Area with #NowPlaying!
+You can visit this project at https://167.99.161.158/ . The site will ask for your location, then pull tweets from your Area with #NowPlaying! **Any tweets created from this app will be posted from @BI_Kehran**
 
 # Overview
 
