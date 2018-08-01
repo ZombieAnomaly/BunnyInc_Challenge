@@ -142,11 +142,11 @@ class TwitterDisplayBehavior extends Component {
   }
 
   updateLocation(e){
+    this.setState({result:null});
     this.props.onChange(e);
   }
 
   render(){
-
     if(this.props.data.canLocate == false){
       return(<GetLocation value="" onChange={this.updateLocation}/>);
     }

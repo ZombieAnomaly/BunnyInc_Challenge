@@ -10,7 +10,7 @@ class Header extends Component{
 
     constructor(props){
         super(props);
-        this.state = {url: 'youtube.com/watch?', content: ''};
+        this.state = {url: 'youtube.com/watch?', content: '', tweeted:false};
 
         //method binding to expose 'this' in instance methods
         this.postStatus = this.postStatus.bind(this);
@@ -46,27 +46,49 @@ class Header extends Component{
         $.post("APIs/PostTweet.php", {data:this.state},
         function(data, status){
             console.log("posted: ", JSON.parse(data));
-        });   
+            this.setState({tweeted:true});
+            setTimeout(function(){
+                this.setState({tweeted:false});
+            }.bind(this), 4000);
+        }.bind(this));   
     }
 
     render(){
-        return(
-            <div className = "Header">
-                <h1 className="Title">#NowPlaying <span className="city">{this.props.city}</span> </h1>
+        if(this.state.tweeted == false){
+            return(
+                <div className = "Header">
+                    <h1 className="Title">#NowPlaying <span className="city">{this.props.city}</span> </h1>
 
-                <label htmlFor="URL">Video URL: 
-                    <input id="URL" type="text"  value={this.state.url} onChange={this.handleChangeURL} name="URL"/>
-                </label>
+                    <label htmlFor="URL">Video URL: 
+                        <input id="URL" type="text"  value={this.state.url} onChange={this.handleChangeURL} name="URL"/>
+                    </label>
 
-                <label htmlFor="Comment">Content:  
-                    <input id="Content" type="text" maxLength='140' name="Comment" value={this.state.content} onChange={this.handleChangeContent} />
-                </label>
+                    <label htmlFor="Comment">Content:  
+                        <input id="Content" type="text" maxLength='140' name="Comment" value={this.state.content} onChange={this.handleChangeContent} />
+                    </label>
 
-                <button onClick = {this.postStatus} className ="NewStatus"> <FontAwesomeIcon size="lg" color="#55acee" icon={['fab', 'twitter']} /> Tweet to #NowPlaying</button>
+                    <button onClick = {this.postStatus} className ="NewStatus"> <FontAwesomeIcon size="lg" color="#55acee" icon={['fab', 'twitter']} /> Tweet to #NowPlaying</button>
 
-                <button onClick = {this.props.onReset} className ="ResetLocation"> Reset Location </button>
-            </div>
-        )
+                    <button onClick = {this.props.onReset} className ="ResetLocation"> Reset Location </button>
+                </div>
+            )
+        }else{
+            return(
+                <div className = "Header">
+                    <h1 className="Title">#NowPlaying <span className="city">{this.props.city}</span> </h1>
+
+                    <label htmlFor="URL">Video URL: 
+                        <input id="URL" type="text"  value={this.state.url} onChange={this.handleChangeURL} name="URL"/>
+                    </label>
+
+                    <label htmlFor="Comment">Content:  
+                        <input id="Content" type="text" maxLength='140' name="Comment" value={this.state.content} onChange={this.handleChangeContent} />
+                    </label>
+
+                    <h3>Nice, you Tweeted!</h3>
+                </div> 
+            )           
+        }
     }
 }
 

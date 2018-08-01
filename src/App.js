@@ -48,19 +48,19 @@ class App extends Component {
 
   //location has been changed
   handleLocationChange(coords){
-    let location = {
+    this.setState({ location: {
       coords:{
         latitude:coords[0],
         longitude:coords[1]
       }
-    };
-
-    this.setState({ location: location, canLocate: true });
+    }, canLocate: true });
+    console.log("new location: ", this.state.location);
   }
 
   //user requests to reset location
   handleLocationReset(){
-    this.setState({ canLocate: false });
+    this.setState({ canLocate: false , city:null});
+    console.log("CanLocate is false");
   }
 
   //gecoded user coords to city name
