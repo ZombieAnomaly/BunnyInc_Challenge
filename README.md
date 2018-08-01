@@ -30,3 +30,8 @@ As far as the TwitterAPI goes, **at first I tried using the StreamingAPI to get 
 # Conclusion
 
 Overall this project was loads of fun! **In total, the project took me about 25-30 work hours to complete.** Half of the time was spent on the collection of twitter data and best approaches for gathering new tweets, while the rest of the time was spent on design and UI. I actually really enjoyed scrapping twitter data and building out a small 'dashboard' to utilize it. The toughest part was deciding how / when twitter should be scrapped, but in the end, it was the simple solution that worked best.
+
+# To-Do
+
+ - Add feedback to the UI when a user creates a tweet using the navbar at the top of the pag
+ - Fix "reset location" functionality when locational is already determined
