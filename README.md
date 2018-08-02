@@ -25,7 +25,7 @@ You can visit this project at https://167.99.161.158/ . The site will ask for yo
 
 When I initially viewed this challenge the first thing that popped into my head was ReactJS! Its **flexibility would still allow me to use other libraries** (or even frameworks for that matter) but **it's uni-directional approach to logic would allow me to create these very neat, isolated, OOP based components** that would do some logic, render an output, and pass data to its children.** 
 
-As far as the TwitterAPI goes, **at first I tried using the StreamingAPI to get real-time updates but this turned out to be overkill and not really necessary**. In the beginning, I had even built out a Processing Queue and a Consumer to collect and consumer tweets in realtime with separate processes ( this was the server wouldn't be slowed down ). In the end, I simply **repeatedly call the SearchAPI every few minutes and update the UI if there any differences in our current data vs the new data we just pulled in.**
+As far as the TwitterAPI goes, **at first I tried using the StreamingAPI to get real-time updates but this turned out to be overkill and not really necessary**. In the beginning, I had even built out a Processing Queue and a Consumer to collect and consumer tweets in realtime with separate processes ( this was the server wouldn't be slowed down ). In the end, I simply **repeatedly call the SearchAPI via AJAX every few minutes and update the UI if there any differences in our current data (tweets) vs the new data we just pulled in.**
 
 # Conclusion
 
@@ -33,5 +33,5 @@ Overall this project was loads of fun! **In total, the project took me about 25-
 
 # To-Do
 
- - Add feedback to the UI when a user creates a tweet using the navbar at the top of the pag
- - Fix "reset location" functionality when locational is already determined
+ - ~~Add feedback to the UI when a user creates a tweet using the navbar at the top of the pag~~
+ - ~~Fix "reset location" functionality when locational is already determined~~
